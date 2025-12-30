@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillPath Prep - Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-wrapper">
+        <a href="../index.html" class="back-button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Voltar
+        </a>
+
+        <div class="feedback-container">
+            <header>
+                <h1>SkillPath Prep</h1>
+                <p>Como está sendo sua jornada conosco?</p>
+            </header>
+
+            <form id="feedbackForm">
+                <div class="rating-group">
+                    <label class="emoji"><input type="radio" name="rating" value="😞"><span>😞</span></label>
+                    <label class="emoji"><input type="radio" name="rating" value="😐"><span>😐</span></label>
+                    <label class="emoji"><input type="radio" name="rating" value="😊" checked><span>😊</span></label>
+                    <label class="emoji"><input type="radio" name="rating" value="😁"><span>😁</span></label>
+                    <label class="emoji"><input type="radio" name="rating" value="🤩"><span>🤩</span></label>
+                </div>
+
+                <div class="input-group">
+                    <label for="userName">Seu Nome</label>
+                    <input type="text" id="userName" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="userComments">Seu Feedback</label>
+                    <textarea id="userComments" rows="3" placeholder="Conte-nos os detalhes..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Salvar Feedback</button>
+            </form>
+        </div>
+
+        <div class="history-container">
+            <h3>Feedbacks Salvos</h3>
+            <div id="feedbackList"></div>
+            <button id="clearBtn" class="clear-btn">Limpar tudo</button>
+        </div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>

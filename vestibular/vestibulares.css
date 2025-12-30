@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #e9ecef;
+    min-height: 100vh;
+}
+
+.teto {
+    background-color: #2c3e50;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.teto h1 {
+    font-size: 1.6rem;
+    color: #3498db;
+}
+
+.btn-nav {
+    background: transparent;
+    color: #ecf0f1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 40px 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin: 20px 0;
+}
+
+.descricao {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.badge {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.nem {
+    border-bottom: 6px solid #2ecc71;
+}
+.nem .badge {
+    background-color: #2ecc71;
+}
+.nem:hover {
+    border-color: #2ecc71;
+}
+
+.fuvest, .unicamp, .unesp {
+    border-bottom: 6px solid #f39c12;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.fuvest .badge, .unicamp .badge, .unesp .badge {
+    background-color: #f39c12;
+}
+
+.fuvest:hover, .unicamp:hover, .unesp:hover {
+    opacity: 0.9;
+    transform: none;
+}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
